@@ -54,7 +54,7 @@
        
 /*ROTAS*/
     app.get("/", function(req, res){
-            res.render("usuarios/login")       
+            res.render("index")       
     })
 
     app.get("/404", function(req, res){
