@@ -5,6 +5,11 @@ router.get('/registro', function (req, res) {
     res.render("usuarios/registro")
 })
 
+
+router.get('/editar', function (req, res) {
+    res.render("usuarios/editar")
+})
+
 router.get('/index', function (req, res) {
     res.render("usuarios/index")
 })

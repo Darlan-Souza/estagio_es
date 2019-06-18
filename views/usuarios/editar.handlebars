@@ -5,9 +5,18 @@
 {{else}}
 
 {{/each}}
-<h3>Adicione um aluno</h3>
-<div class="card">
+<h3>Editar aluno</h3>
+
+<div class="card" style="margin-bottom: 10em;">
     <div class="card-body">
+        <h5>Pesuise o aluno</h5>
+        <form class="form-inline">
+            <input class="form-control mr-2 col-sm-5" type="search" placeholder="Pesquisar matricula do aluno" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 col-sm-2" type="submit">Pesquisar</button>
+        </form>
+
+        <br>
+        <h5>Dados do aluno</h5>
         <form action="" method="POST">
             <label for="nome">Nome: </label>
             <input type="text" name="nome" class="form-control" required>
@@ -22,7 +31,7 @@
                 <option value="2">Orientador 3</option>
             </select>
 
-            <button type="submit" class="btn btn-success mt-3">Criar conta</button>
+            <button type="submit" class="btn btn-success mt-3">Salvar alterações</button>
         </form>
     </div>
 </div>
