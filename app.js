@@ -10,7 +10,10 @@
     const flash = require('connect-flash')
     //carregando rotas
     const usuarios = require("./routes/usuario")
-    const estagio = require("./routes/estagio")
+    const aluno = require("./routes/aluno")
+    const orientador = require("./routes/orientador")
+    const professor = require("./routes/professor")
+    const turma = require("./routes/turma")
 
 /*CONFIGURAÇÕES*/
     //Sessão
@@ -64,7 +67,10 @@
     //defino a rota
     app.use('/admin', admin)
     app.use('/usuarios', usuarios)
-    app.use('/estagio', estagio)
+    app.use('/aluno', aluno)
+    app.use('/orientador', orientador)
+    app.use('/professor', professor)
+    app.use('/turma', turma)
 
 /*OUTROS*/
 const PORT = 8081

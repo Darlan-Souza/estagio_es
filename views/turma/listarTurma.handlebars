@@ -1,0 +1,35 @@
+<h3 style="text-align: left;">Turmas</h3>
+<div class="form-group input-group">
+    <input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
+</div>
+<div class="card" style="margin-bottom: 10em;">
+    <table id="tabela" class="table table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th>Ano</th>
+                <th>Semestre</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>2019</th>
+                <td>1</td>
+                <td><a href="/turma/alunosTurma"><button class="btn btn-mini btn-success">Conferir turma</button></a>
+                    <a href="/turma/editarTurma"><button class="btn btn-mini btn-primary">Alterar</button></a>
+                    <button class="btn btn-danger">Excluir</button></td>
+            </tr>
+            <tr>
+                <th>2019</th>
+                <td>1</td>
+                <td><a href="/turma/alunosTurma"><button class="btn btn-mini btn-success">Conferir turma</button>
+                        <a href="/turma/editarTurma"><button class="btn btn-mini btn-primary">Alterar</button></a>
+                        <button class="btn btn-danger">Excluir</button></td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+<script>
+    $('input#txt_consulta').quicksearch('table#tabela tbody tr');
+</script>
