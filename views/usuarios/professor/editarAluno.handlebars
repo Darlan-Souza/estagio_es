@@ -9,13 +9,6 @@
 
 <div class="card" style="margin-bottom: 10em;">
     <div class="card-body">
-        <h5>Pesuise o aluno</h5>
-        <form class="form-inline">
-            <input class="form-control mr-2 col-sm-5" type="search" placeholder="Pesquisar matricula do aluno" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 col-sm-2" type="submit">Pesquisar</button>
-        </form>
-
-        <br>
         <h5>Dados do aluno</h5>
         <form action="" method="POST">
             <label for="nome">Nome: </label>
@@ -24,6 +17,13 @@
             <input type="email" name="email" class="form-control" required>
             <label for="matricula">Matricula: </label>
             <input type="password" name="matricula" class="form-control" required>
+
+            <label for="turma" class=" mt-3">Turma:</label>
+            <select class="form-control" id="turma">
+                <option value="0">2019/1</option>
+            </select>
+
+
             <label for="orientador" class=" mt-3">Orientador:</label>
             <select class="form-control" id="orientador">
                 <option value="0">Orientador 1</option>

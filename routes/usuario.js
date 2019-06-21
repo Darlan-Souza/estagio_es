@@ -39,6 +39,10 @@ router.get('/editar', function (req, res) {
     res.render("usuarios/editar")
 })
 
+router.get('/registro_professor', function (req, res) {
+    res.render("usuarios/professor/registro_professor")
+})
+
 router.get('/editarAluno', function (req, res) {
     res.render("usuarios/professor/editarAluno")
 })
@@ -59,6 +63,25 @@ router.get("/listarOrientadores", function (req, res) {
     res.render("usuarios/professor/listarOrientadores")
 })
 
+router.get('/turma', function (req, res) {
+    res.render("usuarios/professor/turma")
+})
+
+router.get('/addTurma', function (req, res) {
+    res.render("usuarios/turma/addTurma")
+})
+
+router.get('/listarTurma', function (req, res) {
+    res.render("usuarios/turma/listarTurma")
+})
+
+router.get('/editarTurma', function (req, res) {
+    res.render("usuarios/turma/editarTurma")
+})
+
+router.get('/alunosTurma', function (req, res) {
+    res.render("usuarios/turma/alunosTurma")
+})
 
 //Sempre fica por ultimo
 module.exports = router 

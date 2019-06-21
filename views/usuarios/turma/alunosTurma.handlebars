@@ -1,0 +1,137 @@
+<style>
+    #datepicker {
+        width: 300px;
+    }
+</style>
+
+<h3>Turma: 2019/1</h3>
+<div class="card" style="margin-bottom: 10em;">
+    <div class="card-body">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Nº matrícula</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Etapa 1</th>
+                    <th scope="col">Etapa 2</th>
+                    <th scope="col">Etapa 3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Nome</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Nome</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Nome</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Nome</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">5</th>
+                    <td>Nome</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">6</th>
+                    <td>Nome</td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Atualizar status</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <label for="orientador" class=" mt-3">Etapa:</label>
+                <select class="form-control" id="orientador">
+                    <option value="0">Em andamento</option>
+                    <option value="1">Finalizada</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Salvar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').trigger('focus')
+    })
+
+</script>

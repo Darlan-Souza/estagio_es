@@ -1,0 +1,20 @@
+{{#each erros}}
+
+<div class="alert alert-danger">{{texto}}</div>
+
+{{else}}
+
+{{/each}}
+<h3>Editar turma</h3>
+<div class="card">
+    <div class="card-body">
+        <form action="" method="POST">
+            <label for="ano">Ano: </label>
+            <input type="text" name="ano" class="form-control" required>
+            <label for="semestre">Semestre: </label>
+            <input type="semestre" name="semestre" class="form-control" required>
+           
+            <button type="submit" class="btn btn-success mt-3">Salvar alterações</button>
+        </form>
+    </div>
+</div>
