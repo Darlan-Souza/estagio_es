@@ -13,6 +13,10 @@ router.get("/login", function (req, res) {
     res.render("usuarios/login")
 })
 
+router.get("/documentacao", function (req, res) {
+    res.render("usuarios/alunos/documentacao")
+})
+
 //usuario fazer logout do sistema 
 router.get("/logout", function(req, res){
     req.logout()
