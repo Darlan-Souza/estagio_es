@@ -32,11 +32,15 @@ router.get('/novoaluno', function (req, res) {
 })
 
 router.get('/listarAlunos', function (req, res) {
-    res.render("usuarios/professor/aluno_listar")
+    res.render("usuarios/professor/listarAlunos")
 })
 
 router.get('/editar', function (req, res) {
     res.render("usuarios/editar")
+})
+
+router.get('/editarAluno', function (req, res) {
+    res.render("usuarios/professor/editarAluno")
 })
 
 router.get('/orientadores', function (req, res) {
