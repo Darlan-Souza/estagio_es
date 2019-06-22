@@ -9,7 +9,6 @@
     const session = require('express-session')
     const flash = require('connect-flash')
     //carregando rotas
-    const usuarios = require("./routes/usuario")
     const aluno = require("./routes/aluno")
     const orientador = require("./routes/orientador")
     const professor = require("./routes/professor")
@@ -66,7 +65,6 @@
 
     //defino a rota
     app.use('/admin', admin)
-    app.use('/usuarios', usuarios)
     app.use('/aluno', aluno)
     app.use('/orientador', orientador)
     app.use('/professor', professor)
