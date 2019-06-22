@@ -5,6 +5,21 @@
 {{else}}
 
 {{/each}}
+
+<style type="text/css">
+    .detalhes_req:hover {
+        background: rgba(0, 169, 161, 0.3);
+        cursor: pointer;
+    }
+</style>
+
+<div class="col m12 s12 detalhes_req">
+    <a class="waves-effect waves-light btn" id="voltar" style="background: #34a5a1; color: white; float: right;">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+</div>
+<br>
+
 <h3>Editar aluno</h3>
 
 <div class="card" style="margin-bottom: 10em;">
@@ -35,3 +50,10 @@
         </form>
     </div>
 </div>
+
+<script>
+    $('#voltar').click(function (e) {
+        e.preventDefault();
+        window.history.go(-1);
+    });
+</script>

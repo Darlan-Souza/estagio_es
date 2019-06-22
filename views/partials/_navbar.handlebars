@@ -1,4 +1,10 @@
 <!--Arquivo que contém o menu da aplicação-->
+<style>
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+</style>
+
 <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
     <a class="navbar-brand" href="/professor/index">Sistema de estagio</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -12,18 +18,37 @@
                 <a class="nav-link" href="/professor/index">Home <span class="sr-only">(current)</span></a>
             </li>
 
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Cadastrar</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Turmas</a>
-            </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Consultar</a>
-            </li>
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">Cadastrar</button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/turma/addTurma">Turma</a>
+                    <a class="dropdown-item" href="/orientador/cadastrarOrientador">Orientador</a>
+                    <a class="dropdown-item" href="/aluno/novoaluno">Aluno</a>
+                </div>
+            </div>
+            <div class="dropdown">
+                <button type="button" class="btn dropdown-toggle" data-toggle="dropdown">Consultar</button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="/turma/listarTurma">Turmas</a>
+                    <a class="dropdown-item" href="/orientador/listarOrientadores">Orientadores</a>
+                    <a class="dropdown-item" href="/aluno/listarAlunos">Alunos</a>
+                </div>
+            </div>
         </ul>
         <form class="form-inline my-2 my-lg-0">
             <a class="nav-link" href="/"><i class="fas fa-user fa-2x"></i></a>
+            <a class="nav-link" href="/professor/logout"><i class="fas fa-sign-out-alt fa-2x"></i></a>
         </form>
     </div>
 </nav>
+
+<script>
+    $('body').on('mouseenter mouseleave', '.dropdown', function (e) {
+        var _d = $(e.target).closest('.dropdown');
+        if (e.type === 'mouseenter') _d.addClass('show');
+        setTimeout(function () {
+            _d.toggleClass('show', _d.is(':hover'));
+            $('[data-toggle="dropdown"]', _d).attr('aria-expanded', _d.is(':hover'));
+        }, 300);
+    });
+</script>

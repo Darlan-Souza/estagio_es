@@ -2,13 +2,24 @@
     #datepicker {
         width: 300px;
     }
+
+    .detalhes_req:hover {
+        background: rgba(0, 169, 161, 0.3);
+        cursor: pointer;
+    }
 </style>
+
+<div class="col m12 s12 detalhes_req">
+    <a class="waves-effect waves-light btn" id="voltar" style="background: #34a5a1; color: white; float: right;">
+        <i class="fas fa-arrow-left"></i> Voltar
+    </a>
+</div>
+<br>
 
 <h3>Turma: 2019/1</h3>
 <div class="card" style="margin-bottom: 10em;">
-    <div class="card-body">
-        <table class="table">
-            <thead class="thead-dark">
+    <table id="tabela" class="table table-hover">
+        <thead class="thead-dark">
                 <tr>
                     <th scope="col">Nº matrícula</th>
                     <th scope="col">Nome</th>
@@ -22,84 +33,36 @@
                     <th scope="row">1</th>
                     <td>Nome</td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em
+                            andamento</button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em
+                            andamento</button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em
+                            andamento</button>
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">2</th>
                     <td>Nome</td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em
+                            andamento</button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em
+                            andamento</button>
                     </td>
                     <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em
+                            andamento</button>
                     </td>
                 </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Nome</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">4</th>
-                    <td>Nome</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">5</th>
-                    <td>Nome</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                </tr>
-                <tr>
-                    <th scope="row">6</th>
-                    <td>Nome</td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                    <td>
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Em andamento</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-
-    </div>
+        </tbody>
+    </table>
 </div>
 
 <!-- Modal -->
@@ -133,5 +96,9 @@
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').trigger('focus')
     })
+    $('#voltar').click(function (e) {
+        e.preventDefault();
+        window.history.go(-1);
+    });
 
 </script>

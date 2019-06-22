@@ -5,15 +5,35 @@
 {{else}}
 
 {{/each}}
+<style type="text/css">
+  .detalhes_req:hover {
+    background: rgba(0, 169, 161, 0.3);
+    cursor: pointer;
+  }
+</style>
+
+<div class="col m12 s12 detalhes_req">
+  <a class="waves-effect waves-light btn" id="voltar" style="background: #34a5a1; color: white; float: right;">
+    <i class="fas fa-arrow-left"></i> Voltar
+  </a>
+</div>
+<br>
 <h3>Cadastre a turma</h3>
 <div class="card">
-    <div class="card-body">
-        <form action="" method="POST">
-            <label for="ano">Ano: </label>
-            <input type="text" name="ano" class="form-control" required>
-            <label for="semestre">Semestre: </label>
-            <input type="semestre" name="semestre" class="form-control" required>
-            <button type="submit" class="btn btn-success mt-3">Adicionar turma</button>
-        </form>
-    </div>
+  <div class="card-body">
+    <form action="" method="POST">
+      <label for="ano">Ano: </label>
+      <input type="text" name="ano" class="form-control" required>
+      <label for="semestre">Semestre: </label>
+      <input type="semestre" name="semestre" class="form-control" required>
+      <button type="submit" class="btn btn-success mt-3">Adicionar turma</button>
+    </form>
+  </div>
 </div>
+
+<script>
+  $('#voltar').click(function (e) {
+    e.preventDefault();
+    window.history.go(-1);
+  });
+</script>
